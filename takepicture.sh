@@ -1,16 +1,11 @@
 #!/bin/bash
 
-i="0"
-DATE=$(date +%Y-%m-%d_%H%M)
-
-#while [ $i -lt 1 ]
-#do
 #mount a folder into RAM to store the picture
 mkdir -p /home/pi/SecureCameraServer/webcam
 sudo mount -t tmpfs tmpfs /home/pi/SecureCameraServer/webcam
 
 #take the picture
-raspistill -vf -o /home/pi/SecureCameraServer/webcam/toSend.jpg
+raspistill -n -md 5 -o /home/pi/SecureCameraServer/webcam/toSend.jpg
 
 #call sript to send 
 /usr/bin/python /home/pi/SecureCameraServer/SSLtestWebcam.py
