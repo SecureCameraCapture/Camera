@@ -13,8 +13,8 @@ if __name__ == '__main__':
    # camera.stop_preview()
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    ipnathan = '139.78.71.59'
-    portnathan = 10023
+    ip = '139.78.71.59'
+    port = 10023
     #req cert from server
     ssl_sock = ssl.wrap_socket(s, ca_certs="/home/pi/SecureCameraServer/server.crt", cert_reqs=ssl.CERT_REQUIRED)
 
