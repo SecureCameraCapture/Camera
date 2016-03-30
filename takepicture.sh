@@ -8,7 +8,7 @@ sudo mount -t tmpfs tmpfs /home/pi/SecureCameraServer/webcam
 raspistill -n -md 5 -o /home/pi/SecureCameraServer/webcam/toSend.jpg
 
 #call sript to send 
-/usr/bin/python /home/pi/SecureCameraServer/SSLtestWebcam.py
+/usr/bin/python /home/pi/SecureCameraServer/sendpicture.py
 
 #remove the picture from RAM
 sudo umount /home/pi/SecureCameraServer/webcam
