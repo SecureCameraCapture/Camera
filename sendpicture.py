@@ -18,7 +18,7 @@ if __name__ == '__main__':
     #req cert from server
     ssl_sock = ssl.wrap_socket(s, ca_certs="/home/pi/SecureCameraServer/server.crt", cert_reqs=ssl.CERT_REQUIRED)
 
-    ssl_sock.connect((ipnathan, portnathan))
+    ssl_sock.connect((ip, port))
 
     print repr(ssl_sock.getpeername())
     print ssl_sock.cipher()
